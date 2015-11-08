@@ -7,7 +7,8 @@
 //
 
 #import "CommonUtilities.h"
-
+#import "MBProgressHUD.h"
+#import "AppDelegate.h"
 @implementation CommonUtilities
 
 +(void) displayAlertWithTitle:(NSString*) title andMessage:(NSString*) message {
@@ -17,5 +18,18 @@
                                               cancelButtonTitle:@"Ok"
                                               otherButtonTitles:nil];
     [alertView show];
+}
+
++(void) showLoadingView {
+    AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
+    UIView* mainView = appDelegate.window.rootViewController.view;
+    [MBProgressHUD showHUDAddedTo:mainView animated:YES];
+
+}
+
++(void) hideLoadingView {
+    AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
+    UIView* mainView = appDelegate.window.rootViewController.view;
+    [MBProgressHUD hideHUDForView:mainView animated:YES];
 }
 @end

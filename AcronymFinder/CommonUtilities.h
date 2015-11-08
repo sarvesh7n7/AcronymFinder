@@ -11,4 +11,6 @@
 @interface CommonUtilities : NSObject
 
 +(void) displayAlertWithTitle:(NSString*) title andMessage:(NSString*) message;
++(void) showLoadingView;
++(void) hideLoadingView;
 @end

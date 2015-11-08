@@ -136,24 +136,12 @@
 		65B188CB1BEF0B08005C50DD /* AcronymFinder */ = {
 			isa = PBXGroup;
 			children = (
+				65B1892A1BEF5771005C50DD /* Models */,
+				65B189251BEF56E7005C50DD /* AppDelegate */,
+				65B189281BEF573D005C50DD /* Common */,
+				65B189261BEF56F8005C50DD /* ViewControllers */,
+				65B189291BEF5751005C50DD /* Services */,
 				65B188F21BEF0C45005C50DD /* AFNetworking */,
-				65B188D01BEF0B08005C50DD /* AppDelegate.h */,
-				65B188D11BEF0B08005C50DD /* AppDelegate.m */,
-				65B188D31BEF0B08005C50DD /* AcronymViewController.h */,
-				65B188D41BEF0B08005C50DD /* AcronymViewController.m */,
-				65B189171BEF1CA0005C50DD /* MoreVariationsViewController.h */,
-				65B189181BEF1CA0005C50DD /* MoreVariationsViewController.m */,
-				65B1891D1BEF44FB005C50DD /* AcronymTableViewCell.h */,
-				65B1891E1BEF44FB005C50DD /* AcronymTableViewCell.m */,
-				65B1891F1BEF44FB005C50DD /* AcronymTableViewCell.xib */,
-				65B189221BEF50C2005C50DD /* CommonUtilities.h */,
-				65B189231BEF50C2005C50DD /* CommonUtilities.m */,
-				65B189111BEF14FD005C50DD /* NetworkService.h */,
-				65B189121BEF14FD005C50DD /* NetworkService.m */,
-				65B1891A1BEF1CE9005C50DD /* AcronymDataManager.h */,
-				65B1891B1BEF1CE9005C50DD /* AcronymDataManager.m */,
-				65B189141BEF1922005C50DD /* LongForm.h */,
-				65B189151BEF1922005C50DD /* LongForm.m */,
 				65B188D61BEF0B08005C50DD /* Main.storyboard */,
 				65B188D91BEF0B08005C50DD /* Images.xcassets */,
 				65B188DB1BEF0B08005C50DD /* LaunchScreen.xib */,
@@ -212,6 +200,82 @@
 				65B189051BEF0C45005C50DD /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		65B189251BEF56E7005C50DD /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				65B188D01BEF0B08005C50DD /* AppDelegate.h */,
+				65B188D11BEF0B08005C50DD /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		65B189261BEF56F8005C50DD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				65B188D31BEF0B08005C50DD /* AcronymViewController.h */,
+				65B188D41BEF0B08005C50DD /* AcronymViewController.m */,
+				65B189171BEF1CA0005C50DD /* MoreVariationsViewController.h */,
+				65B189181BEF1CA0005C50DD /* MoreVariationsViewController.m */,
+				65B189271BEF571B005C50DD /* TableViewCells */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		65B189271BEF571B005C50DD /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				65B1891D1BEF44FB005C50DD /* AcronymTableViewCell.h */,
+				65B1891E1BEF44FB005C50DD /* AcronymTableViewCell.m */,
+				65B1891F1BEF44FB005C50DD /* AcronymTableViewCell.xib */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		65B189281BEF573D005C50DD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				65B189221BEF50C2005C50DD /* CommonUtilities.h */,
+				65B189231BEF50C2005C50DD /* CommonUtilities.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		65B189291BEF5751005C50DD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				65B189111BEF14FD005C50DD /* NetworkService.h */,
+				65B189121BEF14FD005C50DD /* NetworkService.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		65B1892A1BEF5771005C50DD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				65B1892C1BEF5790005C50DD /* DataManagers */,
+				65B1892B1BEF5783005C50DD /* Data Models */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		65B1892B1BEF5783005C50DD /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				65B189141BEF1922005C50DD /* LongForm.h */,
+				65B189151BEF1922005C50DD /* LongForm.m */,
+			);
+			name = "Data Models";
+			sourceTree = "<group>";
+		};
+		65B1892C1BEF5790005C50DD /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				65B1891A1BEF1CE9005C50DD /* AcronymDataManager.h */,
+				65B1891B1BEF1CE9005C50DD /* AcronymDataManager.m */,
+			);
+			name = DataManagers;
 			sourceTree = "<group>";
 		};
 		6A409381136B049210AAA689 /* Frameworks */ = {

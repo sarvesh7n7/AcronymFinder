@@ -23,7 +23,7 @@
     operation.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
 
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-
+        [CommonUtilities hideLoadingView];
         if(self.complitionBlock != nil) {
             NSArray* responseArray = (NSArray*)responseObject;
             if (responseArray != nil && responseArray.count > 0) {
@@ -35,9 +35,12 @@
         }
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [CommonUtilities hideLoadingView];
         [CommonUtilities displayAlertWithTitle:@"Error Retrieving the acronym" andMessage:[error localizedDescription]];
     }];
     [operation start];
+    [CommonUtilities showLoadingView];
+    
 }
 
 

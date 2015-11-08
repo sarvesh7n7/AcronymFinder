@@ -22,6 +22,8 @@
 
 @implementation AcronymViewController
 
+int selectedIndex = 0;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     UINib *cellNib = [UINib nibWithNibName:@"AcronymTableViewCell" bundle:nil];
@@ -64,7 +66,8 @@
 }
 
 #pragma mark - UITableViewDelegate
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    selectedIndex = (int)indexPath.row;
     [self performSegueWithIdentifier:@"variationsSegue" sender:self];
 
 }
@@ -78,6 +81,12 @@
 }
 
  #pragma mark - Navigation
-
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+     MoreVariationsViewController* MVVC =  [segue destinationViewController];
+     LongForm* variationArray = self.longFormsArray[0];
+     MVVC.longFormsArray = variationArray.variations;
+ // Pass the selected object to the new view controller.
+ }
 
 @end
